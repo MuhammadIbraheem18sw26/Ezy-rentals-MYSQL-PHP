@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 09, 2022 at 06:47 AM
+-- Generation Time: Sep 10, 2022 at 03:31 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -40,6 +40,8 @@ CREATE TABLE `cars` (
 -- Dumping data for table `cars`
 --
 
+
+
 -- --------------------------------------------------------
 
 --
@@ -53,18 +55,13 @@ CREATE TABLE `rentedcars` (
   `booking_date` date NOT NULL,
   `rent_start_date` date NOT NULL,
   `rent_end_date` date NOT NULL,
-  `car_return_date` date DEFAULT NULL,
-  `fare` double NOT NULL,
-  `no_of_days` int(50) DEFAULT NULL,
-  `total_amount` double DEFAULT NULL,
-  `return_status` varchar(10) NOT NULL
+  `fare` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `rentedcars`
---
 
+-- --------------------------------------------------------
 
+--
 -- Table structure for table `user_form`
 --
 
@@ -75,12 +72,6 @@ CREATE TABLE `user_form` (
   `password` varchar(255) NOT NULL,
   `user_type` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `user_form`
---
-
-
 
 --
 -- Indexes for dumped tables
@@ -112,13 +103,13 @@ ALTER TABLE `user_form`
 -- AUTO_INCREMENT for table `cars`
 --
 ALTER TABLE `cars`
-  MODIFY `car_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `car_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT for table `rentedcars`
 --
 ALTER TABLE `rentedcars`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT for table `user_form`
@@ -127,4 +118,6 @@ ALTER TABLE `user_form`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
-
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
